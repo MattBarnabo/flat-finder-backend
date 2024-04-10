@@ -1,7 +1,5 @@
 # README Apartment App
 
-Luis
-
 ## Add RSpec dependencies✅
 
 ```
@@ -11,7 +9,7 @@ rails generate rspec:install
 
 ## Create a User model via Devise and add appropriate configurations✅
 
-### add devise dependencies
+### Add devise dependencies
 
 ```
 bundle add devise
@@ -20,13 +18,13 @@ rails generate devise User
 rails db:migrate
 ```
 
-### add code to config/environments/development.rb
+### Add code to config/environments/development.rb
 
 ```
 config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 ```
 
-### replace code in config/initializers/devise.rb
+### Replace code in config/initializers/devise.rb
 
 ```
 # find this line:
@@ -35,13 +33,13 @@ config.sign_out_via = :delete
 config.sign_out_via = :get
 ```
 
-### create registrations and sessions controllers to handle sign ups and logins
+### Create registrations and sessions controllers to handle sign ups and logins
 
 ```
 rails generate devise:controllers users -c registrations sessions
 ```
 
-### replace code in app/controllers/users/registrations_controller.rb
+### Replace code in app/controllers/users/registrations_controller.rb
 
 ```
 class Users::RegistrationsController < Devise::RegistrationsController
@@ -88,13 +86,89 @@ Rails.application.routes.draw do
   end
 ```
 
-Configure CORS✅
-Add JWT dependencies and configurations✅
-Add JWT revocation✅
-Setup a README✅
+## Configure CORS✅
 
-- Data configurations have been inputed successfully.
+### Update config/initializers/cors.rb
 
 ```
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'http://localhost:3001'
+    resource '*',
+    headers: ["Authorization"],
+    expose: ["Authorization"],
+    methods: [:get, :post, :put, :patch, :delete, :options, :head],
+    max_age: 600
+  end
+end
+```
 
+### Uncomment this from Gemfile
+
+```
+gem "rack-cors"
+```
+
+###
+
+## Add JWT dependencies and configurations✅
+
+### Install dependencies
+
+```
+bundle add devise-jwt
+```
+
+### Create Jwt secret key
+
+```
+bundle exec rails secret
+```
+
+### Run this command to open the window to add the new secret key
+
+```
+EDITOR="code --wait" bin/rails credentials:edit
+```
+
+### Add the secret key below the secret key base using this code
+
+```
+jwt_secret_key: <newly-created secret key>
+```
+
+### In the terminal hit 'control + c' to save the file
+
+### If you get an error saying it didn't save. Manually save the file with 'command + s' in the VScode window
+
+## Add JWT revocation✅
+
+### Run this in the terminal
+
+```
+rails generate model jwt_denylist
+```
+
+### Add this code to the migration: db/migrate/
+
+```
+def change
+  create_table :jwt_denylist do |t|
+    t.string :jti, null: false
+    t.datetime :exp, null: false
+  end
+  add_index :jwt_denylist, :jti
+end
+```
+
+### Migrate
+
+```
+rails db:migrate
+```
+
+### Replace this in the app/models/user.rb
+
+```
+devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :jwt_authenticatable, jwt_revocation_strategy: JwtDenylist
 ```
