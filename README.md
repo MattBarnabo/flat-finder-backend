@@ -141,6 +141,21 @@ jwt_secret_key: <newly-created secret key>
 
 ### If you get an error saying it didn't save. Manually save the file with 'command + s' in the VScode window
 
+### Add this to config/initializers/devise.rb
+
+```
+config.jwt do |jwt|
+  jwt.secret = Rails.application.credentials.jwt_special_key
+  jwt.dispatch_requests = [
+    ['POST', %r{^/login$}],
+  ]
+  jwt.revocation_requests = [
+    ['DELETE', %r{^/logout$}]
+  ]
+  jwt.expiration_time = 5.minutes.to_i
+end
+```
+
 ## Add JWT revocation✅
 
 ### Run this in the terminal
