@@ -51,3 +51,5 @@ gem "devise", "~> 4.9"
 gem "rspec", "~> 3.13"
 
 gem "rspec-rails", "~> 6.1"
+
+gem "devise-jwt", "~> 0.11.0"
