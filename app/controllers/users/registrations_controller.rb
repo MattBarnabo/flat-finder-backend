@@ -2,6 +2,7 @@
 
 class Users::RegistrationsController < Devise::RegistrationsController
   respond_to :json
+  include RackSessionsFix
   def create
     build_resource(sign_up_params)
     resource.save
