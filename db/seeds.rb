@@ -4,57 +4,96 @@ user2 = User.where(email: "test2@example.com").first_or_create(password: "passwo
 
 apartmentsU1 = [
   {
-    street: '112 Fade street',
-    unit: '3D',
-    city: 'NY',
-    state: 'NY',
-    square_footage: '1300',
-    price: '3300',
-    bedrooms: 3,
-    bathrooms: 3.0,
-    pets: 'all pets allowed',
-    image: 'https://images.unsplash.com/photo-1619542402915-dcaf30e4e2a1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50c3xlbnwwfHwwfHx8MA%3D%3D'
+    id: 4,
+		street: "Baker Street",
+		unit: "221B ",
+		city: "London",
+		state: "England",
+		square_footage: 1525,
+		price: "3000",
+		bedrooms: 2,
+		bathrooms: 1.0,
+		pets: "small pets okay",
+		image:
+			"https://selenestudiesabroad.files.wordpress.com/2014/01/img_7327.jpg",
   },
 
   {
-    street: '23 Kick It Ave',
-    unit: 'C0',
-    city: 'LA',
-    state: 'CA',
-    square_footage: '1500',
-    price: '6000',
-    bedrooms: 1,
-    bathrooms: 0.5,
-    pets: 'no pets allowed',
-    image: 'https://images.unsplash.com/photo-1551361415-69c87624334f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFwYXJ0bWVudHN8ZW58MHx8MHx8fDA%3D'
+    id: 3,
+		street: "Leinster Square",
+		unit: "3B",
+		city: "London",
+		state: "England",
+		square_footage: 400,
+		price: "2000",
+		bedrooms: 1,
+		bathrooms: 2.0,
+		pets: "small pets okay",
+		image:
+			"https://plus.unsplash.com/premium_photo-1661315431756-f9870d5ff5a0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   }
 ]
 
   apartmentsU2 = [
     {
-    street: '129 West 81st Street',
-    unit: '5A',
-    city: 'NY',
-    state: 'NY',
-    square_footage: '1000',
-    price: '2000',
-    bedrooms: 2,
-    bathrooms: 1.0,
-    pets: 'no pets allowed',
-    image: 'https://images.unsplash.com/photo-1567684014761-b65e2e59b9eb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXBhcnRtZW50c3xlbnwwfHwwfHx8MA%3D%3D'
+      id: 1,
+      street: "Oaklands Road",
+      unit: "9A",
+      city: "London",
+      state: "England",
+      square_footage: 500,
+      price: "1800",
+      bedrooms: 2,
+      bathrooms: 2.0,
+      pets: "yes!",
+      image:
+        "https://images.unsplash.com/photo-1469022563428-aa04fef9f5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
   },
 
   {
-    street: '123 Hide Your Pockets Blvd',
-    unit: '4K',
-    city: 'Chicago',
-    state: 'Illinois',
-    square_footage: '900',
-    price: '1500',
-    bedrooms: 2,
-    bathrooms: 1.5,
-    pets: 'pets allowed',
-    image: 'https://images.unsplash.com/photo-1515263487990-61b07816b324?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXBhcnRtZW50c3xlbnwwfHwwfHx8MA%3D%3D'
+    id: 2,
+		street: "Hollybush Hill",
+		unit: "508",
+		city: "London",
+		state: "England",
+		square_footage: 700,
+		price: "2500",
+		bedrooms: 2,
+		bathrooms: 2.0,
+		pets: "yes!",
+		image:
+			"https://plus.unsplash.com/premium_photo-1673561231809-17f6f9ef09b7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXBhcnRtZW50c3xlbnwwfHwwfHx8MA%3D%3D",
+
+  },
+
+  {
+    id: 5,
+		street: "Northchurch Road",
+		unit: "415A",
+		city: "London",
+		state: "England",
+		square_footage: 1023,
+		price: "2000",
+		bedrooms: 1,
+		bathrooms: 2.0,
+		pets: "small pets okay",
+		image:
+			"https://plus.unsplash.com/premium_photo-1661293864119-9c689ca0a1de?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+
+  {
+    id: 6,
+		street: "Brompton Road",
+		unit: "52A",
+		city: "London",
+		state: "England",
+		square_footage: 400,
+		price: "1800",
+		bedrooms: 1,
+		bathrooms: 2.0,
+		pets: "small pets okay",
+		image:
+			"https://images.unsplash.com/photo-1576378839886-48817ce9c383?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   }
 ]
 
