@@ -4,7 +4,6 @@ user2 = User.where(email: "test2@example.com").first_or_create(password: "passwo
 
 apartmentsU1 = [
   {
-    id: 4,
 		street: "Baker Street",
 		unit: "221B ",
 		city: "London",
@@ -19,7 +18,6 @@ apartmentsU1 = [
   },
 
   {
-    id: 3,
 		street: "Leinster Square",
 		unit: "3B",
 		city: "London",
@@ -36,7 +34,6 @@ apartmentsU1 = [
 
   apartmentsU2 = [
     {
-      id: 1,
       street: "Oaklands Road",
       unit: "9A",
       city: "London",
@@ -51,7 +48,6 @@ apartmentsU1 = [
   },
 
   {
-    id: 2,
 		street: "Hollybush Hill",
 		unit: "508",
 		city: "London",
@@ -67,7 +63,6 @@ apartmentsU1 = [
   },
 
   {
-    id: 5,
 		street: "Northchurch Road",
 		unit: "415A",
 		city: "London",
@@ -82,7 +77,6 @@ apartmentsU1 = [
   },
 
   {
-    id: 6,
 		street: "Brompton Road",
 		unit: "52A",
 		city: "London",
