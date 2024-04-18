@@ -13,7 +13,7 @@ apartmentsU1 = [
 		price: "3000",
 		bedrooms: 2,
 		bathrooms: 1.0,
-		pets: "small pets okay",
+		pets: "Birds",
 		image:
 			"https://selenestudiesabroad.files.wordpress.com/2014/01/img_7327.jpg",
   },
@@ -28,7 +28,7 @@ apartmentsU1 = [
 		price: "2000",
 		bedrooms: 1,
 		bathrooms: 2.0,
-		pets: "small pets okay",
+		pets: "Large Pets",
 		image:
 			"https://plus.unsplash.com/premium_photo-1661315431756-f9870d5ff5a0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   }
@@ -45,7 +45,7 @@ apartmentsU1 = [
       price: "1800",
       bedrooms: 2,
       bathrooms: 2.0,
-      pets: "yes!",
+      pets: "Medium Pets",
       image:
         "https://images.unsplash.com/photo-1469022563428-aa04fef9f5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
   },
@@ -60,7 +60,7 @@ apartmentsU1 = [
 		price: "2500",
 		bedrooms: 2,
 		bathrooms: 2.0,
-		pets: "yes!",
+		pets: "Cats",
 		image:
 			"https://plus.unsplash.com/premium_photo-1673561231809-17f6f9ef09b7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXBhcnRtZW50c3xlbnwwfHwwfHx8MA%3D%3D",
 
@@ -76,7 +76,7 @@ apartmentsU1 = [
 		price: "2000",
 		bedrooms: 1,
 		bathrooms: 2.0,
-		pets: "small pets okay",
+		pets: "Small Dogs",
 		image:
 			"https://plus.unsplash.com/premium_photo-1661293864119-9c689ca0a1de?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -91,7 +91,7 @@ apartmentsU1 = [
 		price: "1800",
 		bedrooms: 1,
 		bathrooms: 2.0,
-		pets: "small pets okay",
+		pets: "Reptiles ",
 		image:
 			"https://images.unsplash.com/photo-1576378839886-48817ce9c383?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   }
